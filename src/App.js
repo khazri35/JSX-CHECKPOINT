@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import "./mystyles.css";
+import TheImage  from './assets/imageInSrc.jpg';
+import Video from './myvideo/TheObstacles.mp4';
+
 
 function App() {
+  const Title = "Khazri Naim";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+  <div className="body" style={{border:"solid1px blackmax-width:100vw"}}>
+    <h1 className="title red">{Title}</h1>
+    <br/>
+    <img src="/imageInPublic.jpg" alt="PubImage" />
+    <br />
+    <img src={TheImage} alt="SrcImage" />
+    <br/>
+    <video src={Video} width="320" height="240" controls></video>
+  </div>
   );
 }
 
